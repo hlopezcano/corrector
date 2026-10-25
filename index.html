@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrector de Postura con Sensor · OnelixGlobal</title>
+<meta name="description" content="Corrector de postura con sensor de inclinación que te avisa con una vibración suave cuando te encorvas. Se ajusta y se lleva debajo de la ropa. Pago contra entrega en toda Colombia, entrega en 2 a 5 días.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F4EF; --card:#FFFFFF; --navy:#101A3C; --ink:#0B1226;
+    --blue:#1848D8; --gold:#B98A2F; --muted:#5C6476; --line:#E5E1D8;
+    --sora:'Sora',system-ui,sans-serif; --inter:'Inter',system-ui,sans-serif; --serif:'Lora',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--inter);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+
+  .topbar{background:var(--navy);color:var(--paper);font-size:13px;letter-spacing:.02em}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:12px;flex-wrap:wrap}
+  .topbar b{font-weight:600;color:#fff}
+  .topbar .tb-brand{font-family:var(--sora);font-weight:700}
+  .topbar .tb-brand em{font-style:normal;color:#7ea2ff}
+
+  .hero{padding:56px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+  h1{font-family:var(--sora);font-weight:800;font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-.03em;color:var(--navy)}
+  h1 .accent{color:var(--blue)}
+  .lead{font-size:17px;color:var(--muted);max-width:470px;margin:18px 0 26px}
+  .precio{display:flex;align-items:baseline;gap:10px;margin-bottom:22px}
+  .precio .monto{font-family:var(--sora);font-weight:800;font-size:40px;color:var(--navy);letter-spacing:-.02em}
+  .precio .moneda{font-size:15px;color:var(--muted);font-weight:500}
+  .precio .tag{font-size:12px;font-weight:600;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:4px 12px;letter-spacing:.03em}
+  .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sora);font-weight:700;font-size:16px;text-decoration:none;padding:16px 30px;border-radius:999px;transition:.2s}
+  .btn-solid{background:var(--navy);color:#fff}
+  .btn-solid:hover{background:var(--blue);transform:translateY(-1px)}
+  .btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}
+  .btn-ghost:hover{background:#fff}
+  .trustline{margin-top:22px;font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center}
+  .trustline svg{width:15px;height:15px;stroke:var(--gold)}
+
+  .stage{position:relative}
+  .foto{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(16,26,60,.35);display:block}
+  .stage .chip{position:absolute;left:-12px;bottom:28px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 16px;box-shadow:0 14px 30px -18px rgba(16,26,60,.35);font-size:13px;font-weight:600}
+  .stage .chip small{display:block;color:var(--muted);font-weight:500;font-size:11.5px}
+
+  .specs{background:var(--navy);color:var(--paper)}
+  .specs .wrap{padding:30px 26px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .spec{text-align:left}
+  .spec .n{font-family:var(--sora);font-weight:800;font-size:28px;color:#fff;letter-spacing:-.02em}
+  .spec .n small{font-size:14px;font-weight:600;color:#7ea2ff}
+  .spec .l{font-size:13px;color:#b9c2dc;margin-top:2px}
+
+  .bonus{background:#f3ecd9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .bonus .wrap{display:flex;align-items:center;gap:14px;padding:16px 26px;flex-wrap:wrap}
+  .bonus-tag{font-family:var(--sora);font-weight:700;font-size:14px;color:var(--gold);white-space:nowrap}
+  .bonus .bonus-txt{font-size:14.5px;color:var(--navy)}
+
+  section{padding:60px 0}
+  .kicker{display:block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  h2{font-family:var(--sora);font-weight:700;font-size:clamp(26px,3.2vw,38px);line-height:1.15;letter-spacing:-.02em;color:var(--navy);margin-bottom:16px}
+  .bajada{color:var(--muted);font-size:16px;max-width:620px}
+
+  .dos-en-uno{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px}
+  .uso{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .uso h3{font-family:var(--sora);font-weight:700;font-size:20px;color:var(--navy);margin-bottom:8px}
+  .uso p{color:var(--muted);font-size:15px}
+  .uso .badge{display:inline-block;font-size:12px;font-weight:600;color:var(--blue);background:#e8edfb;border-radius:999px;padding:4px 12px;margin-bottom:14px}
+
+  .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .como-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+  .como-grid .pasos{margin-top:0}
+  .banner-cod{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 20px 40px -24px rgba(16,26,60,.3);display:block}
+  .paso{border-top:2px solid var(--line);padding-top:18px}
+  .paso .num{font-family:var(--sora);font-weight:800;font-size:15px;color:var(--gold)}
+  .paso h3{font-family:var(--sora);font-weight:700;font-size:17px;color:var(--navy);margin:10px 0 6px}
+  .paso p{color:var(--muted);font-size:14.5px}
+
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{font-family:var(--sora);font-weight:600;font-size:16px;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{font-size:22px;color:var(--blue);font-weight:400}
+  details[open] .plus{transform:rotate(45deg)}
+  details p{color:var(--muted);font-size:15px;margin-top:10px;max-width:640px}
+
+  .final{background:var(--navy);color:var(--paper);text-align:left}
+  .final .wrap{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+  .final h2{color:#fff}
+  .final .monto{font-family:var(--sora);font-weight:800;font-size:34px;color:#fff}
+  .final .sub{color:#b9c2dc;font-size:14px}
+  .final .btn-solid{background:var(--blue)}
+  .final .btn-solid:hover{background:#2a62f0}
+
+  footer{padding:26px 0;font-size:13px;color:var(--muted)}
+  footer a{color:var(--blue);text-decoration:none}
+
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:30px}
+    .specs .wrap{grid-template-columns:repeat(2,1fr)}
+    .dos-en-uno,.pasos{grid-template-columns:1fr}
+    .como-grid{grid-template-columns:1fr}
+    .final .wrap{flex-direction:column;align-items:flex-start}
+  }
+</style>
+<script data-goatcounter="https://onelixglobal.goatcounter.com/count" data-goatcounter-path="/landing/corrector-postura" async src="//gc.zgo.at/count.js"></script>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Product", "name": "Corrector de Postura con Sensor", "image": "https://corrector.onelixglobal.com/corrector_principal.png", "description": "Corrector de postura con sensor de inclinación que avisa con una vibración suave cuando te encorvas. Se ajusta y se lleva debajo de la ropa. Pago contra entrega en toda Colombia, entrega en 2 a 5 días.", "brand": {"@type": "Brand", "name": "OnelixGlobal"}, "offers": {"@type": "Offer", "price": "39900", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "https://corrector.onelixglobal.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿De qué talla es?", "acceptedAnswer": {"@type": "Answer", "text": "Se ajusta con cierre regulable. Escríbenos tu medida por WhatsApp y te decimos si te sirve."}}, {"@type": "Question", "name": "¿Se nota debajo de la ropa?", "acceptedAnswer": {"@type": "Answer", "text": "Es discreto bajo una camiseta; está pensado para llevarlo mientras trabajas, no como prenda exterior."}}, {"@type": "Question", "name": "¿Sirve para un dolor fuerte?", "acceptedAnswer": {"@type": "Answer", "text": "Es un apoyo postural del día a día, no un tratamiento médico. Si el dolor es constante o intenso, consulta a un profesional."}}, {"@type": "Question", "name": "¿Cómo se carga o cambia la batería?", "acceptedAnswer": {"@type": "Answer", "text": "Estamos confirmando con el proveedor si el módulo es recargable por USB o va a pila; te lo decimos antes de comprar."}}]}
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yv4jk5zzgr");
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tb-brand">Onelix<em>Global</em></span>
+    <span>🚚 <b>Pago contra entrega</b> en toda Colombia · entrega 2–5 días</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Corrector de postura · con sensor</span>
+      <h1>Espalda derecha,<br><span class="accent">aviso cuando te encorvas.</span></h1>
+      <p class="lead">Te avisa con una vibración suave cada vez que te encorvas. Se pone sobre los hombros, se ajusta y se lleva debajo de la camiseta mientras trabajas, estudias o pasas horas con el celular.</p>
+      <div class="precio">
+        <span class="monto">$39.900</span>
+        <span class="moneda">COP · pagas al recibir</span>
+        <span class="tag">Envío contra entrega</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="https://tienda.onelixglobal.com/productos/corrector-postura-sensor/" target="_blank" rel="noopener">Comprar ahora</a>
+        <a class="btn btn-ghost" href="#como">Cómo se compra</a>
+      </div>
+      <p class="trustline">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Lo probamos antes de publicarlo · 5 días para devolverlo
+      </p>
+      <p class="trustline">
+        ¿Dudas? Escríbenos por <a href="https://wa.me/34604802583" target="_blank" rel="noopener" style="color:#1848D8;text-decoration:underline;font-weight:600">WhatsApp →</a>
+      </p>
+    </div>
+    <div class="stage">
+      <img class="foto" src="corrector_principal.png" alt="Corrector de postura con sensor OnelixGlobal">
+      <span class="chip">Sensor de inclinación<small>aviso por vibración</small></span>
+    </div>
+  </div>
+</header>
+
+<div class="specs">
+  <div class="wrap">
+    <div class="spec"><div class="n">Vibración</div><div class="l">te avisa al encorvarte</div></div>
+    <div class="spec"><div class="n">Ajustable</div><div class="l">cierre regulable</div></div>
+    <div class="spec"><div class="n">Discreto</div><div class="l">debajo de la ropa</div></div>
+    <div class="spec"><div class="n">Sensor</div><div class="l">de inclinación</div></div>
+  </div>
+</div>
+
+<div class="bonus">
+  <div class="wrap">
+    <span class="bonus-tag">🎁 Regalo incluido</span>
+    <span class="bonus-txt">La guía digital «Cuello y hombros sin tensión» de regalo — va con tu pedido, sin coste extra.</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Por qué te sirve</span>
+    <h2>Un recordatorio que trabaja por ti</h2>
+    <p class="bajada">No es una banda que te obliga: es un aviso que te recuerda lo que tú no notas, para que corrijas la postura muchas veces sin darte cuenta.</p>
+    <div class="dos-en-uno">
+      <div class="uso">
+        <span class="badge">Teletrabajo y oficina</span>
+        <h3>Horas sentado, espalda menos cargada</h3>
+        <p>Mientras trabajas o estudias, te avisa cuando te encorvas hacia la pantalla y te ayuda a volver a una postura derecha.</p>
+      </div>
+      <div class="uso">
+        <span class="badge">Celular y sofá</span>
+        <h3>El «cuello de texto» bajo control</h3>
+        <p>Pasas horas mirando el teléfono: el aviso te corta la mala postura antes de que se convierta en molestia al final del día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <span class="kicker">Compra segura</span>
+    <h2>Pides, recibes y pagas al tenerlo en mano</h2>
+    <div class="como-grid">
+      <div class="pasos">
+        <div class="paso"><span class="num">01</span><h3>Haces el pedido</h3><p>Sin tarjeta y sin adelantar nada. Solo tu dirección.</p></div>
+        <div class="paso"><span class="num">02</span><h3>Te llega en 2–5 días</h3><p>Entrega contra entrega en toda Colombia, con aviso por WhatsApp.</p></div>
+        <div class="paso"><span class="num">03</span><h3>Pagas al recibir</h3><p>Y si no te convence, tienes 5 días para devolverlo.</p></div>
+      </div>
+      <img class="banner-cod" src="corrector_enuso.png" alt="Corrector de postura en uso">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Dudas frecuentes</span>
+    <h2>Antes de comprar</h2>
+    <details open>
+      <summary>¿De qué talla es?<span class="plus">+</span></summary>
+      <p>Se ajusta con cierre regulable. Escríbenos tu medida por WhatsApp y te decimos si te sirve.</p>
+    </details>
+    <details>
+      <summary>¿Se nota debajo de la ropa?<span class="plus">+</span></summary>
+      <p>Es discreto bajo una camiseta; está pensado para llevarlo mientras trabajas, no como prenda exterior.</p>
+    </details>
+    <details>
+      <summary>¿Sirve para un dolor fuerte?<span class="plus">+</span></summary>
+      <p>Es un apoyo postural del día a día, no un tratamiento médico. Si el dolor es constante o intenso, consulta a un profesional.</p>
+    </details>
+    <details>
+      <summary>¿Cómo se carga o cambia la batería?<span class="plus">+</span></summary>
+      <p>Estamos confirmando con el proveedor si el módulo es recargable por USB o va a pila; te lo decimos antes de comprar.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div>
+      <h2>Corrector de postura con sensor</h2>
+      <div><span class="monto">$39.900</span> <span class="sub">COP · pago contra entrega · guía digital de regalo</span></div>
+    </div>
+    <a class="btn btn-solid" href="https://tienda.onelixglobal.com/productos/corrector-postura-sensor/" target="_blank" rel="noopener">Comprar ahora →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>OnelixGlobal · Productos útiles para el día a día. Compras seguras en <a href="https://tienda.onelixglobal.com" target="_blank" rel="noopener">tienda.onelixglobal.com</a> · <a href="mailto:info@onelixglobal.com">info@onelixglobal.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
